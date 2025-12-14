@@ -1,0 +1,394 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-dark: #1e1e1e;
+    --primary-light: #D8EFF7;
+    --accent: #9ecaff;
+    --text-color: #222;
+}
+
+/* ---------------------------
+   BASE STYLES
+--------------------------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #293855;
+    color: var(--text-color);
+    position: relative;
+}
+
+/* ---------------------------
+   DARK MODE BUTTON (TOP RIGHT)
+--------------------------- */
+#themeBtn {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 8px 15px;
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+#themeBtn:hover {
+    background-color: #444;
+}
+
+/* ---------------------------
+   BUTTON STYLING (Edit Job, Toggle Skills, Quote Button, Send)
+--------------------------- */
+#editJobBtn,
+#toggleSkillsBtn,
+#quoteBtn,
+#sendBtn {
+    display: inline-block;
+    margin: 15px 0 25px;
+    padding: 10px 18px;
+    background-color: #4a90e2; /* softer blue for dark mode */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+#editJobBtn:hover,
+#toggleSkillsBtn:hover,
+#quoteBtn:hover,
+#sendBtn:hover {
+    background-color: #357ABD; /* slightly darker on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#editJobBtn:active,
+#toggleSkillsBtn:active,
+#quoteBtn:active,
+#sendBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Hidden class to hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* ---------------------------
+   NAVIGATION BAR
+--------------------------- */
+.navbar {
+    display: flex;
+    gap: 10px;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--accent);
+}
+
+/* ---------------------------
+   MAIN CONTENT / FLEX LAYOUT
+--------------------------- */
+#main-content {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--primary-light);
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.left-column { flex: 1; min-width: 250px; }
+.right-column { flex: 2; min-width: 250px; }
+
+/* ---------------------------
+   PROFILE SECTION
+--------------------------- */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.left-column h2,
+.right-column h2 {
+    margin-top: 25px;  /* spacing above headings */
+    margin-bottom: 10px; /* spacing below heading */
+    color: var(--primary-dark);
+}
+
+.job-title {
+    color: gray;
+    font-style: italic;
+    margin: 5px 0 15px;
+    font-size: 16px;
+}
+
+/* ---------------------------
+   CONTACT SECTION
+--------------------------- */
+.contact-section p {
+    margin: 5px 0;
+}
+
+/* Add spacing after Instagram and before Skills */
+#toggleSkillsBtn {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* ---------------------------
+   SKILLS SECTION
+--------------------------- */
+#skillsSection ul {
+    list-style: none;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    max-width: 200px;
+}
+
+#skillsSection ul li {
+    padding: 6px 10px;
+    margin: 5px 0;
+    background-color: #d8eaff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#skillsSection ul li:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* ---------------------------
+   ABOUT ME SECTION
+--------------------------- */
+.right-column p {
+    line-height: 1.6;
+    text-align: justify;
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+/* ---------------------------
+   MESSAGE FORM
+--------------------------- */
+.right-column form.message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.right-column form.message-form input,
+.right-column form.message-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none;
+    background-color: #fff;
+    color: #222;
+}
+
+#counter {
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+#counter.highlight {
+    color: var(--accent);
+}
+
+.right-column form.message-form input:focus,
+.right-column form.message-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* ---------------------------
+   QUOTE DISPLAY
+--------------------------- */
+#quoteDisplay {
+    font-style: italic;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    max-width: 500px;
+}
+
+/* spacing for quote button */
+#quoteBtn {
+    margin-bottom: 20px;
+}
+
+/* ---------------------------
+   FOOTER
+--------------------------- */
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-dark);
+    color: #dcdcdc;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+#currentDate {
+    font-size: 14px;
+    color: #ccc;
+}
+
+body.dark-theme {
+    background-color: #111;
+    color: white;
+}
+
+/* Main content */
+body.dark-theme #main-content {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+/* Navbar */
+body.dark-theme .navbar {
+    background-color: #000;
+}
+body.dark-theme .navbar a {
+    color: var(--accent);
+}
+
+/* Left & Right column texts */
+body.dark-theme .contact-section p,
+body.dark-theme .right-column p,
+body.dark-theme .left-column h2,
+body.dark-theme .right-column h2 {
+    color: white;
+}
+
+/* Skills Section */
+body.dark-theme #skillsSection ul {
+    background-color: #222;
+    border-color: #444;
+}
+body.dark-theme #skillsSection ul li {
+    background-color: #333;
+    color: white;
+}
+body.dark-theme #skillsSection ul li:hover {
+    background-color: var(--accent);
+    color: white;
+}
+
+/* Inputs & Textareas */
+body.dark-theme input,
+body.dark-theme textarea {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+/* Character Counter */
+body.dark-theme #counter {
+    color: #ccc;
+}
+
+/* Buttons */
+body.dark-theme #editJobBtn,
+body.dark-theme #toggleSkillsBtn,
+body.dark-theme #quoteBtn,
+body.dark-theme #sendBtn,
+body.dark-theme #themeBtn {
+    background-color: #4a90e2;
+    color: white;
+}
+body.dark-theme #editJobBtn:hover,
+body.dark-theme #toggleSkillsBtn:hover,
+body.dark-theme #quoteBtn:hover,
+body.dark-theme #sendBtn:hover,
+body.dark-theme #themeBtn:hover {
+    background-color: #357ABD;
+}
+
+/* Quote Box */
+body.dark-theme #quoteDisplay {
+    background-color: #222;
+    color: #fff;
+    border-color: #444;
+}
+
+/* Smooth transitions */
+#main-content,
+#quoteDisplay,
+input,
+textarea,
+button,
+#skillsSection ul li {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+--------------------------- */
+@media (max-width: 768px) {
+    #main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    .profile-img {
+        margin: 0 auto;
+    }
+
+    .right-column form.message-form {
+        max-width: 100%;
+    }
+
+    .right-column form.message-form button {
+        width: 100%;
+    }
+}

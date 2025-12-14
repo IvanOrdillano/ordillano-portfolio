@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Chua Ordillano - Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+<nav class="navbar">
+    <a href="ordillano_lab3.html">Home</a>
+    <a href="#">About Me</a>
+    <a href="ordillano_lab1.html">|  Lab 1  |</a>
+    <a href="ordillano_lab2.html">|  Lab 2  |</a>
+    <a href="ordillano_lab3.html">|  Lab 3  |</a>
+</nav>
+
+<!-- DARK MODE BUTTON -->
+<button id="themeBtn">Toggle Dark Mode</button>
+
+<!-- MAIN CONTENT -->
+<div id="main-content">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+        <!-- Profile Section -->
+        <img src="Image.jfif" alt="Ivan Chua Ordillano Profile Picture" class="profile-img">
+
+        <h1>Ivan Chua Ordillano</h1>
+        <p class="job-title">Web Developer</p>
+        <button id="editJobBtn">Edit Job Title</button>
+
+        <!-- Contact Section -->
+        <h2>Contact</h2>
+        <div class="contact-section">
+            <p><strong>School Email:</strong> ordillanoic@students.nu-fairview.edu.ph</p>
+            <p><strong>Facebook:</strong> Ivan Ordillano</p>
+            <p><strong>Instagram:</strong> Ivan_Ordillano</p>
+        </div>
+
+        <!-- Skills Section -->
+        <h2>Skills</h2>
+        <button id="toggleSkillsBtn">Hide Skills</button>
+        <div id="skillsSection">
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+        <!-- About Me Section -->
+        <h2>About Me</h2>
+        <p>Student from National University - Fairview.</p>
+        <p>Currently studying Bachelor of Science in Information Technology with specialization in Mobile and Internet Technology.</p>
+        <p>Consistent Dean's Lister (2024 - Present).</p>
+        <p>Aspiring Web Designer and Web Developer.</p>
+
+        <!-- Message Form Section -->
+        <h2>Message Me</h2>
+        <form class="message-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+
+            <label for="message">Message:</label>
+            <textarea id="msgBox" name="message" maxlength="200" placeholder="Write your message here..." required></textarea>
+            <p>Characters left: <span id="counter">200</span></p>
+
+            <button type="submit" id="sendBtn">Send</button>
+        </form>
+
+        <!-- Motivational Quote Section -->
+        <h2>Motivational Quote</h2>
+        <p id="quoteDisplay">Click the button to get inspired!</p>
+        <button id="quoteBtn">Get Quote</button>
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <i><strong>WebProg - Web Programming 2025</strong></i>
+    <br>
+    <span id="currentDate"></span>
+</footer>
+
+</body>
+</html>

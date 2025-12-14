@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #293855;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background: #D8EFF7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* FLEX LAYOUT */
+        .profile-section {
+            display: flex;
+            gap: 40px;
+        }
+
+        .left,
+        .right {
+            flex: 1;
+        }
+
+        /* PROFILE IMAGE */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            background: #ddd;
+            border-radius: 5px;
+            display: block;
+        }
+
+        /* FORM STYLING */
+        input {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 20px;
+            cursor: pointer;
+            background: #333;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="ordillano_lab3.html">Home</a>
+        <a href="#">About Me</a>
+        <a href="ordillano_lab1.html">| Lab 1 |</a>
+        <a href="ordillano_lab2.html">| Lab 2 |</a>
+        <a href="ordillano_lab3.html">| Lab 3 |</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <div class="profile-section">
+
+            <!-- LEFT SIDE -->
+            <div class="left">
+                <img src="Image.jfif" alt="Profile Image" class="profile-img">
+
+                <h2>Ivan Chua Ordillano</h2>
+                <strong><span>Web Developer</span></strong>
+
+                <h3>Contact</h3>
+                <i>
+                    <p>Email: ivanordillano0@gmail.com</p>
+                    <p>ordillanoic@students.nu-fairview.edu.ph</p>
+                    <p>Facebook: Ivan Ordillano</p>
+                    <p>Instagram: Ivan_Ordillano</p>
+                </i>
+
+                <h3>Skills</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="right">
+                <h2>About Me</h2>
+                <p>Student from National University - Fairview.</p>
+                <p>
+                    Currently studying Bachelor of Science in Information Technology
+                    with Specialization in Mobile and Internet Technology.
+                </p>
+                <p>Consistent Dean's Lister (2024 - Present)</p>
+                <p>Aiming to be a successful Web Designer and Web Developer</p>
+
+                <h2>Message Me</h2>
+                <form>
+                    <label>Name:</label><br>
+                    <input type="text" required><br>
+
+                    <label>Email:</label><br>
+                    <input type="email" required><br>
+
+                    <label>Message:</label><br>
+                    <input type="text" required><br>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <i><strong>WebProg - Web Programming 2025</strong></i>
+    </footer>
+
+</body>
+</html>
